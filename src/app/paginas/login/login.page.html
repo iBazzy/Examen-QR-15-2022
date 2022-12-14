@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-toolbar color="primary">
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="formInic">
+    <ion-card style="text-align:center">
+      <ion-card-header>
+        <ion-img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Logo_DuocUC.svg/1280px-Logo_DuocUC.svg.png">
+        </ion-img>
+        <h2>Iniciar Sesión</h2>
+      </ion-card-header>
+      <ion-item>
+        <ion-label position="floating">Usuario</ion-label>
+        <ion-input type="text" formControlName="usuario" placeholder="Ingrese su usuario"></ion-input>
+        <ion-note slot="error"
+        *ngIf="campo('usuario').invalid  && campo('usuario').errors && campo('usuario').errors.required && fueTocado('usuario') ">
+        Este campo es requerido
+      </ion-note>
+      <ion-note slot="error"
+        *ngIf="campo('usuario').invalid  && campo('usuario').errors && campo('usuario').errors.maxlength && fueTocado('usuario') ">
+        Los caracteres maximos son 15
+      </ion-note>
+      <ion-note slot="error"
+        *ngIf="campo('usuario').invalid  && campo('usuario').errors && campo('usuario').errors.minlength && fueTocado('usuario') ">
+        Los caracteres minimo son 4
+      </ion-note>
+      </ion-item>
+      <ion-item fill="solid">
+        <ion-label position="floating">Contraseña</ion-label>
+        <ion-input type="password" formControlName="contraseña"  placeholder="Ingrese la contraseña"></ion-input>
+        <ion-note slot="error"
+            *ngIf="campo('contraseña').invalid  && campo('contraseña').errors && campo('contraseña').errors.required && fueTocado('contraseña') ">
+            Este campo es requerido
+          </ion-note>
+          <ion-note slot="error"
+            *ngIf="campo('contraseña').invalid  && campo('contraseña').errors && campo('contraseña').errors.maxlength && fueTocado('contraseña') ">
+            Los caracteres maximos son 15
+          </ion-note>
+          <ion-note slot="error"
+            *ngIf="campo('contraseña').invalid  && campo('contraseña').errors && campo('contraseña').errors.minlength && fueTocado('contraseña') ">
+            Los caracteres minimo son 6
+          </ion-note>
+      </ion-item>
+      <br>
+      <br>
+      <a [routerLink]="['password']">¿Has olvidado tu Contraseña?</a>
+      <ion-button color="warning" shape="round" style="margin: 10px" (click)="ingresar()">Iniciar Sesión</ion-button>
+
+    </ion-card>
+  </form>
+</ion-content>
+<ion-footer>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['registro']" >Registrarse</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>
+

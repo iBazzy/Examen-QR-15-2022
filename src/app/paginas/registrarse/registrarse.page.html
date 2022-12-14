@@ -1,0 +1,122 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons>
+
+      <ion-back-button slot="start"></ion-back-button>
+    </ion-buttons>
+    <ion-title slot="end">Registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="formLog" >
+    <ion-card style="text-align:center">
+      <ion-card-header>
+        <ion-img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Logo_DuocUC.svg/1280px-Logo_DuocUC.svg.png">
+        </ion-img>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item>
+          <ion-label >Nombre</ion-label>
+          <ion-input type="text" formControlName="nombre"></ion-input>
+          <ion-note slot="error"
+            *ngIf="campo('nombre').invalid  && campo('nombre').errors && campo('nombre').errors.required && fueTocado('nombre') ">
+            Este campo es requerido
+          </ion-note>
+          <ion-note slot="error"
+            *ngIf="campo('nombre').invalid  && campo('nombre').errors && campo('nombre').errors.maxlength && fueTocado('nombre') ">
+            Los caracteres maximos son 15
+          </ion-note>
+          <ion-note slot="error"
+            *ngIf="campo('nombre').invalid  && campo('nombre').errors && campo('nombre').errors.minlength && fueTocado('nombre') ">
+            Los caracteres minimo son 4
+          </ion-note>
+        </ion-item>
+        <ion-item>
+          <ion-label>Apellido</ion-label>
+          <ion-input type="text" formControlName="apellido"></ion-input>
+          <ion-note slot="error"
+            *ngIf="campo('apellido').invalid  && campo('apellido').errors && campo('apellido').errors.required && fueTocado('apellido') ">
+            Este campo es requerido
+          </ion-note>
+          <ion-note slot="error"
+            *ngIf="campo('apellido').invalid  && campo('apellido').errors && campo('apellido').errors.maxlength && fueTocado('apellido') ">
+            Los caracteres maximos son 15
+          </ion-note>
+          <ion-note slot="error"
+            *ngIf="campo('apellido').invalid  && campo('apellido').errors && campo('apellido').errors.minlength && fueTocado('apellido') ">
+            Los caracteres minimo son 4
+          </ion-note>
+        </ion-item>
+        <ion-item>
+          <ion-label>Usuario</ion-label>
+          <ion-input type="text" formControlName="usuario"></ion-input>
+          <ion-note slot="error"
+            *ngIf="campo('usuario').invalid  && campo('usuario').errors && campo('usuario').errors.required && fueTocado('usuario') ">
+            Este campo es requerido
+          </ion-note>
+          <ion-note slot="error"
+            *ngIf="campo('usuario').invalid  && campo('usuario').errors && campo('usuario').errors.maxlength && fueTocado('usuario') ">
+            Los caracteres maximos son 15
+          </ion-note>
+          <ion-note slot="error"
+            *ngIf="campo('usuario').invalid  && campo('usuario').errors && campo('usuario').errors.minlength && fueTocado('usuario') ">
+            Los caracteres minimo son 4
+          </ion-note>
+        </ion-item>
+        <ion-item>
+          <ion-label>Contraseña</ion-label>
+          <ion-input type="password" formControlName="contraseña"></ion-input>
+          <ion-note slot="error"
+            *ngIf="campo('contraseña').invalid  && campo('contraseña').errors && campo('contraseña').errors.required && fueTocado('contraseña') ">
+            Este campo es requerido
+          </ion-note>
+          <ion-note slot="error"
+            *ngIf="campo('contraseña').invalid  && campo('contraseña').errors && campo('contraseña').errors.maxlength && fueTocado('contraseña') ">
+            Los caracteres maximos son 15
+          </ion-note>
+          <ion-note slot="error"
+            *ngIf="campo('contraseña').invalid  && campo('contraseña').errors && campo('contraseña').errors.minlength && fueTocado('contraseña') ">
+            Los caracteres minimo son 6
+          </ion-note>
+        </ion-item>
+        <ion-item>
+          <ion-label>Correo</ion-label>
+          <ion-input type="email" formControlName="correo"></ion-input>
+          <ion-note slot="error"
+            *ngIf="campo('correo').invalid  && campo('correo').errors && campo('correo').errors.required && fueTocado('correo') ">
+            Este campo es requerido
+          </ion-note>
+          <ion-note slot="error"
+            *ngIf="campo('correo').invalid  && campo('correo').errors && campo('correo').errors.maxlength && fueTocado('correo') ">
+            Los caracteres maximos son 15
+          </ion-note>
+          <ion-note slot="error"
+            *ngIf="campo('correo').invalid  && campo('correo').errors && campo('correo').errors.minlength && fueTocado('correo') ">
+            Los caracteres minimo 10
+          </ion-note>
+        </ion-item>
+        <ion-item>
+          <ion-label>Rut</ion-label>
+          <ion-input type="text" formControlName="rut"></ion-input>
+          <ion-note slot="error"
+            *ngIf="campo('rut').invalid  && campo('rut').errors && campo('rut').errors.required && fueTocado('rut') ">
+            Este campo es requerido
+          </ion-note>
+          <ion-note slot="error"
+            *ngIf="campo('rut').invalid  && campo('rut').errors && campo('rut').errors.maxlength && fueTocado('rut') ">
+            Los caracteres maximos son 15
+          </ion-note>
+          <ion-note slot="error"
+            *ngIf="campo('rut').invalid  && campo('rut').errors && campo('rut').errors.minlength && fueTocado('rut') ">
+            Los caracteres minimo son 4
+          </ion-note>
+        </ion-item><br>
+
+        <ion-button (click)="guardarEstudiante()" color="warning">Registrar</ion-button>
+
+      </ion-card-content>
+    </ion-card>
+  </form>
+</ion-content>

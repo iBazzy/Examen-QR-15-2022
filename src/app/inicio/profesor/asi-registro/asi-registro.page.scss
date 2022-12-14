@@ -1,0 +1,38 @@
+ion-content{
+    --background:url('https://www.colorhexa.com/d9d4d4.png')
+  }
+ion-card-title{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: left;
+}
+ion-card-subtitle{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: left;
+}
+ion-col{
+    background-color:#e0ac08 ;
+    margin: 2px;
+    border-radius: 5px;
+    border-color: black;
+    h6{
+        font-family: 'Times New Roman', Times, serif;
+        text-align: center;
+        color: black;
+        font-size: large;
+    }
+}
+ion-label{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+.h1{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: medium;
+    color: blue;
+    text-align: right;
+}
+ion-button{
+    font-size: medium;
+    font-family: 'Times New Roman', Times, serif;
+
+}

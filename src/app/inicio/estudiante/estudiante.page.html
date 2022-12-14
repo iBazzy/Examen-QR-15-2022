@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title></ion-title>
+    <ion-buttons>
+      <ion-back-button (click)="cambiarModo()"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" [style.--background]="scanActive?'#00000000':'#ffffff'">
+  <ion-button expand="full" color="primary" (click)="startScanner()" [hidden]="scanActive">
+    <ion-icon name="qr-code-outline"></ion-icon>Scanear
+  </ion-button>
+
+  <ion-row class="scan-button" [hidden]="!scanActive">
+    <ion-col class="ion-no-padding">
+      <ion-button expand="full" color="warning" (click)="stopScanner()">Dejar de Scannear</ion-button>
+    </ion-col>
+  </ion-row>
+  <div class="scan-box" [hidden]="!scanActive"></div>
+
+</ion-content>
+
+<!-- <ion-content>
+  <ion-card>
+    <ion-card-content>
+      <ion-button (click)="changeAsistencia()"> Registrar Asistencia</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content> -->

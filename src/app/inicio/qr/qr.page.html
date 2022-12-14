@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title ></ion-title>
+    <ion-button expand="block" (click)="salir()" slot="end">
+      <ion-icon name="log-out-outline"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Tutorial</ion-card-title>
+      <hr>
+    </ion-card-header>
+    <ion-card-content>
+      <h1>Sabias Que...</h1>
+      <span>Esta nueva actualización nos permite registrar la asistencia tan solo escaneando el código QR </span>
+      <ion-img src="../../../assets/icon/QR.png"></ion-img>
+      <br>
+      <ion-button expand="full" color="primary"  [routerLink]="['/estudiante']">Ir a Escanear</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

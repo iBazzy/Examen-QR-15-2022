@@ -1,0 +1,122 @@
+{
+  "usuarios": [
+    {
+      "nombre": "matias",
+      "apellido": "gatica",
+      "usuario": "matgaticas",
+      "contraseña": "123456",
+      "correo": "mat@gmail.com",
+      "rut": "20205748",
+      "tipoUsuario": "estudiante",
+      "id": 1
+    },
+    {
+      "nombre": "Julio",
+      "apellido": "Herrera",
+      "usuario": "juherrera",
+      "contraseña": "123456",
+      "correo": "juherrera@gmai",
+      "rut": "12893128",
+      "tipoUsuario": "profesor",
+      "id": 2
+    },
+    {
+      "nombre": "Carlos",
+      "apellido": "Castillo",
+      "usuario": "carlos",
+      "contraseña": "123456",
+      "correo": "carlos@gmai",
+      "rut": "158326489",
+      "tipoUsuario": "profesor",
+      "id": 3
+    },
+    {
+      "nombre": "Maxi",
+      "apellido": "Gatica",
+      "usuario": "maxgaticas",
+      "contraseña": "123456",
+      "correo": "maxgaticas@gma",
+      "rut": "20205748",
+      "tipoUsuario": "estudiante",
+      "id": 4
+    }
+  ],
+  "asignatura": [
+    {
+      "nombre": "Programación de aplicaciones Móviles",
+      "jornada": "Diurna",
+      "siglas": "D3FGIO2",
+      "fecha": "15/12/22",
+      "idProfesor": "2",
+      "id": 1
+    },
+    {
+      "nombre": "Programación de aplicaciones Móviles",
+      "jornada": "Vespertina",
+      "siglas": "D35G02",
+      "fecha": "15/12/22",
+      "idProfesor": "2",
+      "id": 2
+    },
+    {
+      "nombre": "Arquitectura",
+      "jornada": "Diruna",
+      "siglas": "AR203KF",
+      "fecha": "15/12/22",
+      "idProfesor": "2",
+      "id": 3
+    },
+    {
+      "nombre": "Programación de aplicaciones Móviles",
+      "jornada": "Diurna",
+      "siglas": "DO3D34",
+      "fecha": "15/12/22",
+      "idProfesor": "3",
+      "id": 4
+    }
+  ],
+  "asistencia": [
+    {
+      "nombre": "Programación de aplicaciones Móviles",
+      "jornada": "Diurna",
+      "siglas": "D3FGIO2",
+      "fecha": "15/12/22",
+      "idProfesor": "2",
+      "idAlumno": "1",
+      "idAsignatura": "1",
+      "rutAlumno": "20205748",
+      "PnombreAlumno": "matias",
+      "PapellidoAlumno": "gatica",
+      "asistencia": "true",
+      "id": 1
+    },
+    {
+      "nombre": "Programacion de app moviles",
+      "jornada": "Vespertina",
+      "siglas": "D35G02",
+      "fecha": "15/12/22",
+      "idProfesor": "2",
+      "idAlumno": "1",
+      "idAsignatura": "2",
+      "rutAlumno": "20205748",
+      "PnombreAlumno": "matias",
+      "PapellidoAlumno": "Gatica",
+      "asistencia": "true",
+      "id": 2
+    },
+    {
+      "nombre": "Programacion de app moviles",
+      "jornada": "Vespertina",
+      "siglas": "D35G02",
+      "fecha": "15/12/22",
+      "idProfesor": "2",
+      "idAlumno": "4",
+      "idAsignatura": "2",
+      "rutAlumno": "20205748",
+      "PnombreAlumno": "matias",
+      "PapellidoAlumno": "Gatica",
+      "asistencia": "true",
+      "id": 3
+    }
+  ]
+}
